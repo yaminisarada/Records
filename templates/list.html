@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+   <body>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Address>/td<
+            <td>city</td>
+            <td>Pincode</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["name"]}}</td>
+               <td>{{row["addr"]}}</td>
+               <td> {{ row["city"]}}</td>
+               <td>{{row['pin']}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+      
+    <h2><a href = "/enternew">Add a new record</a></h2>
+   </body>
+</html>
